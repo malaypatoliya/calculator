@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    color: black;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fafafa;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .2);
+    border-radius: 9px;
+}
+
+.container .result_Section{
+    background-color: #212121;
+    color: #fafafa;
+    border-radius: 9px 9px 0 0;
+    padding: 16px 15px;
+}
+
+.container .result_Section input{
+    background: none;
+    border: none;
+    width: 100%;
+    font-size: 2.5rem;
+    color: #fafafa;
+    text-align: right;
+}
+
+.container .button_Section{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.container .button_Section button{
+    padding: 20px 22px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
+    transition: .2s all linear;
+    
+}
+
+.container .button_Section button:hover{
+    background-color: #e0e0e0   ;
+}
+
+.container .button_Section button:active{
+    background-color: #bdbdbd;
+}
+
+.container .button_Section .equalBtn{
+    background-color: #f57f17;
+    border-radius: 0 0 9px 0;
+}
+
+.container .button_Section .doubleZero{
+    border-radius: 0 0 0 9px;
+}
