@@ -97,4 +97,8 @@ function printResult(){
 }
 
 
+function clearScreen(){
+    screen.value = '';
+    document.querySelector('#point').classList.remove('avoid-clicks');
+}
 
