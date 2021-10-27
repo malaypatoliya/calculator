@@ -17,58 +17,72 @@ for(item of btn){
     });
 }
 
+
+
 function getLastChar(){
     if(screen.value == ''){
-        lastVal = '';
+        lastCharVal = '';
     }else{
-        lastVal = screen.value.substring(screen.value.length - 1);
+        lastCharVal = screen.value.substring(screen.value.length - 1);
     }
-    return lastVal;
+    return lastCharVal;
 }
 
 function addPlus(){
     L = getLastChar();
-    if(L == '*' || L == '/' || L == '+' || L == '-' || L == '.'){
+    if(L == '*' || L == '/' || L == '+' || L == '-' || L == '.' || screen.value == ''){
         screen.value += '';
     }else{
         screen.value += '+';
+        document.querySelector('#point').classList.remove('avoid-clicks');
     }
 }
 
 function addMinize(){
     L = getLastChar();
-    if(L == '*' || L == '/' || L == '+' || L == '-' || L == '.'){
+    if(L == '*' || L == '/' || L == '+' || L == '-' || L == '.' || screen.value == ''){
         screen.value += '';
     }else{
         screen.value += '-';
+        document.querySelector('#point').classList.remove('avoid-clicks');
     }
 }
 
 function addMultiply(){
     L = getLastChar();
-    if(L == '*' || L == '/' || L == '+' || L == '-' || L == '.'){
+    if(L == '*' || L == '/' || L == '+' || L == '-' || L == '.' || screen.value == ''){
         screen.value += '';
     }else{
         screen.value += '*';
+        document.querySelector('#point').classList.remove('avoid-clicks');
     }
 }
 
 function addDivision(){
     L = getLastChar();
-    if(L == '*' || L == '/' || L == '+' || L == '-' || L == '.'){
+    if(L == '*' || L == '/' || L == '+' || L == '-' || L == '.' || screen.value == ''){
         screen.value += '';
     }else{
         screen.value += '/';
+        document.querySelector('#point').classList.remove('avoid-clicks');
     }
 }
 
 function addPoint(){
+
     L = getLastChar();
-    if(L == '*' || L == '/' || L == '+' || L == '-' || L == '.'){
+    let flag = 0;
+    if(L == '*' || L == '/' || L == '+' || L == '-' || L == '.' || screen.value == ''){
         screen.value += '';
     }else{
         screen.value += '.';
+        flag = 1;
     }
+        
+    if(flag == 1){
+        document.querySelector('#point').classList.add('avoid-clicks');
+    }
+
 }
 
 
@@ -82,18 +96,5 @@ function printResult(){
     }
 }
 
-
-// function factorial(){
-//     let ans = 1;
-//     let n = screen.value;
-//     if(n == 0 || n == 1){
-//         screen.value = ans;
-//     }else{
-//         for(var i=n; i>=1; i--){
-//             ans = ans * i;
-//         }
-//         screen.value = ans;
-//     }
-// }
 
 
