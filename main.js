@@ -102,3 +102,13 @@ function clearScreen(){
     document.querySelector('#point').classList.remove('avoid-clicks');
 }
 
+
+function backSpace(){
+    if(screen.value.substring(screen.value.length - 1) == '.'){
+        document.querySelector('#point').classList.remove('avoid-clicks');
+    }
+    screen.value = screen.value.substr(0, screen.value.length-1);
+}
+
+
+
