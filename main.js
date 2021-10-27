@@ -104,9 +104,15 @@ function clearScreen(){
 
 
 function backSpace(){
-    if(screen.value.substring(screen.value.length - 1) == '.'){
+    const a = screen.value.substring(screen.value.length - 1)
+    if(a == '.'){
         document.querySelector('#point').classList.remove('avoid-clicks');
     }
+
+    if(a == '*' || a == '/' || a == '+' || a == '-'){
+        document.querySelector('#point').classList.add('avoid-clicks');
+    }
+    
     screen.value = screen.value.substr(0, screen.value.length-1);
 }
 
